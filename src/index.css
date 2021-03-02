@@ -1,0 +1,36 @@
+body {
+  	margin: 0;
+  	font-family: Lato;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+	  background-color: #F1EFCD;
+	  color: #1C2E47;
+}
+
+code {
+  	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration:none;
+	color: #1C2E47;
+}
+
+a:visited {
+	text-decoration:none;
+	color: #5F86C1;
+}

@@ -1,0 +1,13 @@
+.navList {
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+}
+
+.link {
+    margin-right: 30px;
+}
+
+.link.activeLink {
+    color: #1C2E47;
+}

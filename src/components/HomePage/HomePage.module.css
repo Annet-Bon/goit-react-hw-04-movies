@@ -1,0 +1,12 @@
+.homePageSection {
+    margin-left: 20px;
+}
+
+.homePageTitle {
+    font-family: Righteous;
+    text-transform: uppercase;
+    color: #76976A;
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 50px;
+}

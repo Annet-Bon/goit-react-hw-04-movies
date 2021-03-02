@@ -1,0 +1,24 @@
+.moviePageInfo {
+    margin-left: 50px;
+}
+
+.movieTitle,
+.ratingText,
+h3 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.castAndRewiewsLinks {
+    display: flex;
+    justify-content: center;
+}
+
+.link {
+    font-size: 25px;
+    margin-right: 30px;
+}
+
+.link:last-child {
+    margin-right: 0;
+}
