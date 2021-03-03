@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { NavLink, Route } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import { axiosMovieDetails } from '../../services/moviesApi';
 
@@ -12,6 +13,23 @@ import routes from '../../routes';
 import styles from './MovieDetailsPage.module.css';
 
 export default class MovieDetailsPage extends Component {
+	static propTypes = {
+		movie: PropTypes.arrayOf({
+			title: PropTypes.string,
+			name: PropTypes.string,
+			release_date: PropTypes.number,
+			poster_path: PropTypes.string,
+			vote_average: PropTypes.number,
+			overview: PropTypes.string,
+			genres: PropTypes.arrayOf({
+				id: PropTypes.string,
+				name: PropTypes.string,
+			}),
+		}),
+		showLoader: PropTypes.bool,
+		handleGoBack: PropTypes.func,
+	};
+
 	state = {
 		movie: null,
 		showLoader: false,

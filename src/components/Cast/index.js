@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import { axiosCast } from '../../services/moviesApi';
 
@@ -7,6 +8,16 @@ import { LoaderSpinner } from '../LoaderSpinner/index';
 import styles from './Cast.module.css';
 
 export class Cast extends Component {
+	static propTypes = {
+		cast: PropTypes.arrayOf({
+			id: PropTypes.string,
+			name: PropTypes.string,
+			character: PropTypes.string,
+			profile_path: PropTypes.string,
+		}),
+		showLoader: PropTypes.bool,
+	};
+
 	state = {
 		cast: null,
 		showLoader: false,

@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 import queryString from 'query-string';
 
 import { axiosFilms } from '../../services/moviesApi';
@@ -7,6 +8,15 @@ import { SearchInput } from '../SearchInput/index';
 import { MoviesList } from '../MoviesList/index';
 
 export default class Movies extends Component {
+	static propTypes = {
+		films: PropTypes.arrayOf({
+			id: PropTypes.string,
+			author: PropTypes.string,
+			content: PropTypes.string,
+		}),
+		handleSearchQuery: PropTypes.func,
+	};
+
 	state = {
 		films: [],
 	};

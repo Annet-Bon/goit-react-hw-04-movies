@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import { axiosTrendingFilms } from '../../services/moviesApi';
 
@@ -8,6 +9,15 @@ import { LoaderSpinner } from '../LoaderSpinner/index';
 import styles from './HomePage.module.css';
 
 export default class HomePage extends Component {
+	static propTypes = {
+		films: PropTypes.arrayOf({
+			id: PropTypes.string,
+			author: PropTypes.string,
+			content: PropTypes.string,
+		}),
+		showLoader: PropTypes.bool,
+	};
+
 	state = {
 		films: [],
 		showLoader: false,

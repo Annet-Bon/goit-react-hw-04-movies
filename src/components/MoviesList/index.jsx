@@ -1,8 +1,6 @@
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import styles from './MoviesList.module.css';
-
 
 export function MoviesList({ movies, state }) {
     return (
@@ -20,8 +18,3 @@ export function MoviesList({ movies, state }) {
         </>
     )
 }
-
-MoviesList.propTypes = {
-    movies: PropTypes.array,
-    children: PropTypes.node,
-};

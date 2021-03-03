@@ -1,8 +1,17 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import { axiosReviews } from '../../services/moviesApi';
 
 export class Reviews extends Component {
+	static propTypes = {
+		reviews: PropTypes.arrayOf({
+			id: PropTypes.string,
+			author: PropTypes.string,
+			content: PropTypes.string,
+		}),
+	};
+
 	state = {
 		reviews: [],
 	};

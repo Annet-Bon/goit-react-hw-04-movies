@@ -1,6 +1,13 @@
 import { Component } from "react";
+import PropTypes from 'prop-types';
 
 export class SearchInput extends Component {
+	static propTypes = {
+		searchValue: PropTypes.string,
+		inputValueHolder: PropTypes.func,
+		handleSubmit: PropTypes.func,
+	};
+
 	state = {
 		searchValue: "",
 	};
@@ -11,6 +18,7 @@ export class SearchInput extends Component {
 
 	handleSubmit = (event) => {
 		event.preventDefault();
+
 		this.props.onSubmit(this.state.searchValue);
 		this.setState({ searchValue: "" });
 	};
