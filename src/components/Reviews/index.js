@@ -6,9 +6,9 @@ import { axiosReviews } from '../../services/moviesApi';
 export class Reviews extends Component {
 	static propTypes = {
 		reviews: PropTypes.arrayOf({
-			id: PropTypes.string,
-			author: PropTypes.string,
-			content: PropTypes.string,
+			id: PropTypes.string.isRequired,
+			author: PropTypes.string.isRequired,
+			content: PropTypes.string.isRequired,
 		}),
 	};
 

@@ -10,12 +10,12 @@ import styles from './Cast.module.css';
 export class Cast extends Component {
 	static propTypes = {
 		cast: PropTypes.arrayOf({
-			id: PropTypes.string,
-			name: PropTypes.string,
-			character: PropTypes.string,
-			profile_path: PropTypes.string,
+			id: PropTypes.string.isRequired,
+			name: PropTypes.string.isRequired,
+			character: PropTypes.string.isRequired,
+			profile_path: PropTypes.string.isRequired,
 		}),
-		showLoader: PropTypes.bool,
+		showLoader: PropTypes.bool.isRequired,
 	};
 
 	state = {

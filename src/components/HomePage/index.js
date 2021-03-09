@@ -11,9 +11,9 @@ import styles from './HomePage.module.css';
 export default class HomePage extends Component {
 	static propTypes = {
 		films: PropTypes.arrayOf({
-			id: PropTypes.string,
-			author: PropTypes.string,
-			content: PropTypes.string,
+			id: PropTypes.string.isRequired,
+			author: PropTypes.string.isRequired,
+			content: PropTypes.string.isRequired,
 		}),
 		showLoader: PropTypes.bool,
 	};

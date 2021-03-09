@@ -15,18 +15,18 @@ import styles from './MovieDetailsPage.module.css';
 export default class MovieDetailsPage extends Component {
 	static propTypes = {
 		movie: PropTypes.arrayOf({
-			title: PropTypes.string,
-			name: PropTypes.string,
-			release_date: PropTypes.number,
-			poster_path: PropTypes.string,
-			vote_average: PropTypes.number,
-			overview: PropTypes.string,
+			title: PropTypes.string.isRequired,
+			name: PropTypes.string.isRequired,
+			release_date: PropTypes.number.isRequired,
+			poster_path: PropTypes.string.isRequired,
+			vote_average: PropTypes.number.isRequired,
+			overview: PropTypes.string.isRequired,
 			genres: PropTypes.arrayOf({
-				id: PropTypes.string,
-				name: PropTypes.string,
+				id: PropTypes.string.isRequired,
+				name: PropTypes.string.isRequired,
 			}),
 		}),
-		showLoader: PropTypes.bool,
+		showLoader: PropTypes.bool.isRequired,
 		handleGoBack: PropTypes.func,
 	};
 

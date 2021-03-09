@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export class SearchInput extends Component {
 	static propTypes = {
-		searchValue: PropTypes.string,
+		searchValue: PropTypes.string.isRequired,
 		inputValueHolder: PropTypes.func,
 		handleSubmit: PropTypes.func,
 	};

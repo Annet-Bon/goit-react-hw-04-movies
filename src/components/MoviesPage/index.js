@@ -10,9 +10,9 @@ import { MoviesList } from '../MoviesList/index';
 export default class Movies extends Component {
 	static propTypes = {
 		films: PropTypes.arrayOf({
-			id: PropTypes.string,
-			author: PropTypes.string,
-			content: PropTypes.string,
+			id: PropTypes.string.isRequired,
+			author: PropTypes.string.isRequired,
+			content: PropTypes.string.isRequired,
 		}),
 		handleSearchQuery: PropTypes.func,
 	};
